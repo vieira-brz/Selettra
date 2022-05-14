@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+
+html {
+    /* CPT HEADER */
+    --header: linear-gradient(to bottom, cornflowerblue, dodgerblue);
+
+    /* CORES PADRÕES */
+    --verde: #198754;
+    --verde_hover: #0f7345;
+    --verde-cinquenta: #32A62B40;
+
+    --azul: #0d6efd;
+    --azul_hover: #005ee8;
+    --azul-gradient-light: #3c9ae7;
+    --azul-gradient-light-cinquenta: #3c9ae730;
+
+    --amarelo: #ffc107;
+    --amarelo_hover: #f5b800;
+
+    --info: #0dcaf0;
+    --info_hover: #07b5d8;
+
+    --cinza: #dedede;
+    --cinza_hover: #C1C2C1;
+    --cinza_escuro: #888888;
+    --menu-not-sub: #4a4a4a;
+    --cinza-presente: #9d9d9d;
+    --menu-with-sub: #615b648a;
+
+    --vermelho: #dc3545;
+    --vermelho_hover: #d22536;
+    --vermelho-cinquenta: #b7333350;
+
+    --dark: #212529;
+    --dark_hover: #000000;
+    --preto-cinquenta: #00000050;
+
+    --branco: #f8f9fa;
+    --branco_hover: #edeff1;
+    --branco-absoluto: #fff;
+
+    --texto: #343a40;
+    --texto-claro: #969696;
+
+    --border: #00000030;
+    --border-two-light: #cbcccb;
+
+    /* BACKGROUND PRINCIPAL */
+    --bg-principal: #eeeeee;
+
+    /* SHADOWS */
+    --shadow-google: lightgray;
+    --shadow-sweet: #00000070;
+
+    /* CORES GRADIENTES */
+    --gradiente_azul: linear-gradient(90deg, darkblue, mediumblue);
+    --gradiente_vermelho: linear-gradient(90deg, maroon, firebrick);
+
+    /* TRANSITIONS TIME */
+    --transition_fast: .25s;
+    --transition_medium: .5s;
+    --transition_lower: 1s;
+
+    /* HOVER SCALES */
+    --scale_sm: scale(1.1);
+    --scale_md: scale(1.2);
+    --scale_lg: scale(1.3);
+    --scale_xg: scale(1.4);
+    --scale_ug: scale(1.5);
+
+    /* RESPONSIVIDADE */
+    --sm: 320px;
+    --md: 480px;
+    --lg: 768px;
+    --xg: 1024px;
+    --desktop: 1200px;
+    }
+
+    html.dark {
+    /* CPT HEADER */
+    --header: linear-gradient(to bottom, #363636, #1C1C1C);
+    --header: linear-gradient(to bottom, cornflowerblue, dodgerblue);
+
+    /* CORES PADRÕES */
+    --verde: #198754;
+    --verde_hover: #0f7345;
+    --verde-cinquenta: #32A62B40;
+
+    --azul: #0d6efd;
+    --azul_hover: #005ee8;
+    --azul-gradient-light: #3c9ae7;
+    --azul-gradient-light-cinquenta: #3c9ae730;
+
+    --amarelo: #ffc107;
+    --amarelo_hover: #f5b800;
+
+    --info: #0dcaf0;
+    --info_hover: #07b5d8;
+
+    --cinza: #dedede;
+    --cinza_hover: #C1C2C1;
+    --cinza_escuro: #888888;
+    --menu-not-sub: #ffffff75;
+    --menu-with-sub: #ffffff80;
+
+    --vermelho: #dc3545;
+    --vermelho_hover: #d22536;
+    --vermelho-cinquenta: #b7333350;
+
+    --dark: #212529;
+    --dark_hover: #000000;
+    --preto-cinquenta: #00000050;
+
+    --branco: #272727;
+    --branco_hover: #1C1C1C;
+    --branco-absoluto: #1a1a1a;
+
+    --texto: #f8f9fa;
+    --texto-claro: #edeff1;
+
+    --border: #ffffff40;
+    --border-two-light: #525252;
+
+    /* BACKGROUND PRINCIPAL */
+    --bg-principal: #eeeeee;
+
+    /* SHADOWS */
+    --shadow-google: lightgray;
+    --shadow-sweet: #00000070;
+
+    /* CORES GRADIENTES */
+    --gradiente_azul: linear-gradient(90deg, darkblue, mediumblue);
+    --gradiente_vermelho: linear-gradient(90deg, maroon, firebrick);
+
+    /* TRANSITIONS TIME */
+    --transition_fast: .25s;
+    --transition_medium: .5s;
+    --transition_lower: 1s;
+
+    /* HOVER SCALES */
+    --scale_sm: scale(1.1);
+    --scale_md: scale(1.2);
+    --scale_lg: scale(1.3);
+    --scale_xg: scale(1.4);
+    --scale_ug: scale(1.5);
+
+    /* RESPONSIVIDADE */
+    --sm: 320px;
+    --md: 480px;
+    --lg: 768px;
+    --xg: 1024px;
+    --desktop: 1200px;
+}
+
+
+/* SCROLLBAR
+------------------------------------------------------------------------------*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cinza-suave);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--header);
+    -webkit-box-shadow: inset var(--header);
+    -webkit--moz-box-shadow: inset var(--header);
+}
+
+
+/* CONFIGURAÇÕES GERAIS
+------------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--texto);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}

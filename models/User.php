@@ -1,6 +1,6 @@
 <?php
 
-class Login 
+class User 
 {
     private $con; 
 
@@ -9,14 +9,14 @@ class Login
         $this->con = $sql;
     }
 
+    public function cadastrar($nome, $usuario, $senha, $cargo, $acesso)
+    {
+        $query = 'insert into selettra.users values("'.$nome.'", "'.$usuario.'", "md5('.$senha.')","'.$acesso.'","'.$cargo.'")';
+    }
+
     public function entrar($user, $password)
     {
-        $query = 'select * from tdb.user where (
-            EMAIL LIKE = "'.$user.'"
-            OR 
-            USER LIKE = "'.$user.'"
-        ) and 
-            PASS = md5("'.$password.'")';
+        $query = 'select * from selettra.user where (EMAIL LIKE = "'.$user.'" OR USER LIKE = "'.$user.'") and PASS = md5("'.$password.'")';
         
         $user_data = $this->con->readDb($query);
 
@@ -25,12 +25,12 @@ class Login
             $_SESSION[session_id()] = array(
                 'matricula' => $user_data[0]['REGISTRATION'],
                 'nome' => $user_data[0]['NAME'],
-                'email' =>$user_data[0]['EMAIL'] ,
-                'usuario' =>$user_data[0]['USER'] ,
-                'senha' =>$user_data[0]['PASS'] ,
+                'email' =>$user_data[0]['EMAIL'],
+                'usuario' =>$user_data[0]['USER'],
+                'senha' =>$user_data[0]['PASS'],
             );
 
-            $retorno = true;
+            if ($_SESSION) { $retorno = true; } else  { $retorno = false; }
         }
         else 
         { 
@@ -55,7 +55,6 @@ class Login
     {
         unset($this->con);
     }
-
 }
 
 ?>

@@ -53,6 +53,20 @@
     justify-content: center;
 }
 
+@mixin flex-between()
+{
+    display: flex;
+    place-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+@mixin flex-wrap()
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 
 // 
@@ -63,6 +77,7 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background: var(--branco);
 
     @include flex-center();
 
@@ -171,6 +186,95 @@
         .logo {
             height: 25%;
             margin-top: -25%;
+        }
+    }
+}
+
+
+
+// 
+// INDEX WORKSPACE
+// 
+header.selettra-header 
+{
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    background: var(--branco-absoluto); 
+
+    @include flex-between();
+
+    img.logo { width: 8em; }
+
+    .profile {
+        
+        @include flex-center();
+
+        img { width: 4em; }
+    }
+}
+
+
+
+// 
+// INDEX WORKSPACE
+// 
+#index_workspace
+{
+    background: var(--branco);
+
+    section#developers {
+        width: 100%;
+
+        .dev-cards {
+            @include flex-wrap();
+            @include flex-center();
+
+            .card {
+                width: 300px;
+                margin: 20px;
+                padding: 20px;
+                border-radius: 4px;
+                box-shadow: var(--shadow);
+                background: var(--branco-absoluto);
+
+                @include flex-center();
+                flex-direction: column;
+
+                img {
+                    width: 70px;
+                    margin-bottom: 20px;
+                    border-radius: 50px;
+                }
+                .description { 
+                    font-style: italic;
+                    text-align: center; 
+                    color: var(--texto-claro);
+                }
+                .social-media {
+                    @include flex-between();
+
+                    a {
+                        padding: 8px 10px;
+                        border-radius: 50px;
+                        margin: 20px 5px 0 5px;
+                        border: 1px solid lightgray;
+                        transition: var(--transition_fast);
+                        
+                        i { 
+                            font-size: 20px;
+                            color: lightgray; 
+                            transition: var(--transition_fast); 
+                        }
+                    
+                        &:hover {
+                            border-color: var(--effect); 
+                            i { color: var(--effect); }
+                        }
+                    }
+                }
+            }
         }
     }
 }

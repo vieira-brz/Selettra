@@ -4,6 +4,8 @@
 html {
     /* HEADER */
     --effect: #ff3739bd; 
+    --sweet-effect: #ff373930; 
+    --glass: rgba(255, 255, 255, 0.05);
     --header: linear-gradient(to bottom, cornflowerblue, dodgerblue);
 
     /* CORES PADRÕES */

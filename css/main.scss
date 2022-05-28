@@ -113,8 +113,8 @@
         .card {
             min-width: 350px;
             border-radius: 15px;
+            background: var(--glass);
             backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.05);
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         
             .form {
@@ -232,26 +232,37 @@ header.selettra-header
             @include flex-center();
 
             .card {
-                width: 300px;
                 margin: 20px;
                 padding: 20px;
+                flex-basis: 25%;
+                min-width: 300px;
                 border-radius: 4px;
+                background: var(--glass);
                 box-shadow: var(--shadow);
-                background: var(--branco-absoluto);
+                backdrop-filter: blur(10px);
 
                 @include flex-center();
                 flex-direction: column;
+                transition: var(--transition_fast);
+                
+                &:hover {
+                    box-shadow: 0 0 15px var(--sweet-effect);
+                }
 
                 img {
                     width: 70px;
                     margin-bottom: 20px;
                     border-radius: 50px;
                 }
+                
+                .name { margin-bottom: 10px; font-weight: bold; }
+                
                 .description { 
                     font-style: italic;
                     text-align: center; 
                     color: var(--texto-claro);
                 }
+
                 .social-media {
                     @include flex-between();
 
@@ -275,6 +286,29 @@ header.selettra-header
                     }
                 }
             }
+        }
+
+        &::before {
+            content: '';
+            top: 0;
+            width: 90%;
+            z-index: -1;
+            right: -0;
+            height: 100%;
+            position: absolute;
+            clip-path: circle(15% at right 20%);
+            background: linear-gradient(#ffffff, #ff3739bd);
+        }
+        &::after {
+            content: '';
+            top: 0;
+            width: 90%;
+            z-index: -1;
+            left: -0;
+            height: 100%;
+            position: absolute;
+            clip-path: circle(15% at 5% 5%);
+            background: linear-gradient(#ffffff, #ff3739bd);
         }
     }
 }

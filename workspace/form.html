@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="https://www.selettra.com.br/admin/uploads/images/Layout_01_Selletra-01_03.jpg" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- ALERT -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- CHART JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/Chart.min.js"></script>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- PARTICLE JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer data-deferred="1"></script>
+
+    <!-- JS -->
+    <script src="../js/plugins/main.js"></script>
+    <script src="../js/form.js"></script>
+
+    <title>Formulário | Selettra</title>
+</head>
+<body id="form_workspace">
+
+    <!--            -->
+    <!-- PARTÍCULAS -->
+    <!--            -->
+    <div id="particles-js"></div>
+
+
+    <!--       -->
+    <!-- MODAL -->
+    <!--       -->
+    <div class="modal">
+        <div class="form">
+            
+            <div class="step">
+                <h1>ETAPA 1</h1>
+                <button class="btn btn-blue" name="next" to="1"> <i class="fas fa-undo-alt"></i>&nbsp Próximo </button>
+            </div>
+
+            <div class="step">
+                <h1>ETAPA 2</h1>
+                <button class="btn btn-dark" name="prev" to="1"> <i class="fas fa-undo-alt"></i>&nbsp Anterior </button>
+                <button class="btn btn-blue" name="next" to="2"> <i class="fas fa-undo-alt"></i>&nbsp Próximo </button>
+            </div>
+
+            <div class="step">
+                <h1>ETAPA 3</h1>
+                <button class="btn btn-dark" name="prev" to="2"> <i class="fas fa-undo-alt"></i>&nbsp Anterior </button>
+                <button class="btn btn-blue" name="next" to="3"> <i class="fas fa-undo-alt"></i>&nbsp Próximo </button>
+            </div>
+
+            <div class="step">
+                <h1>ETAPA 4</h1>
+                <button class="btn btn-dark" name="prev" to="3"> <i class="fas fa-undo-alt"></i>&nbsp Anterior </button>
+                <button class="btn btn-blue" name="next" to="final"> <i class="fas fa-undo-alt"></i>&nbsp Enviar </button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

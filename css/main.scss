@@ -15,12 +15,16 @@
         color: white;
         background: var(--verde);
 
+        i { color: inherit; }
+
         &:hover { background: var(--verde_hover); }
     }
         
     &.btn-red {
         color: white;
         background: var(--vermelho);
+
+        i { color: inherit; }
 
         &:hover { background: var(--vermelho_hover); }
     }
@@ -29,12 +33,16 @@
         color: white;
         background: var(--azul);
 
+        i { color: inherit; }
+
         &:hover { background: var(--azul_hover); }
     }
 
     &.btn-dark {
         color: white;
         background: var(--dark);
+        
+        i { color: inherit; }
 
         &:hover { background: var(--dark_hover); }
     }
@@ -368,6 +376,45 @@ header.selettra-header
                         i { margin-right: 7px; }
                     }
                 }
+            }
+        }
+    }
+}
+
+
+
+// 
+// FORM WORKSPACE
+// 
+#form_workspace
+{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: var(--branco);
+
+    @include flex-center();
+
+    #particles-js {
+        width: 100%;
+        height: 95vh;
+    }
+
+   .modal {
+        width: 300px;
+        overflow: hidden;
+        position: absolute;
+        -webkit-box-shadow: var(--shadow);
+        background: var(--branco-absoluto);
+
+        .form {
+            width: 400%;
+            height: 100%;
+            display: flex;         
+
+            .step {
+                width: 25%;
+                transition: margin-left 0.3s ease-in-out;
             }
         }
     }

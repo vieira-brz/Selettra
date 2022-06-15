@@ -39,7 +39,7 @@ html {
     --dark_hover: #000000;
     --preto-cinquenta: #00000050;
 
-    --branco: #f8f9fa;
+    --branco: #faf9f6;
     --branco_hover: #edeff1;
     --branco-absoluto: #fff;
 
@@ -189,21 +189,3 @@ html {
     scroll-behavior: smooth;
     font-family: "Poppins",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
-
-
-.btn {
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    box-shadow: var(--shadow);
-    padding: 7px 14px !important;
-}
-
-.btn-blue { color: white; background-color: var(--azul); }
-.btn-blue:hover { background-color: var(--azul_hover); }
-
-.btn-vermelho { color: white; background-color: var(--vermelho); }
-.btn-vermelho:hover { background-color: var(--vermelho_hover); }
-
-.btn-verde { color: white; background-color: var(--verde); }
-.btn-verde:hover { background-color: var(--verde_hover); }

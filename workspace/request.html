@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="https://www.selettra.com.br/admin/uploads/images/Layout_01_Selletra-01_03.jpg" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- ALERT -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- CHART JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/Chart.min.js"></script>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- PARTICLE JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer data-deferred="1"></script>
+
+    <!-- JS -->
+    <script src="../js/plugins/main.js"></script>
+    <script src="../js/form.js"></script>
+
+    <title>Formulário | Selettra</title>
+</head>
+<body id="request_workspace">
+
+    <header class="selettra-header">
+        <img class="logo" src="https://abii.com.br/wp-content/uploads/2021/08/logos-selettra.jpg" alt="logo">
+        <div class="profile">
+            <h3 class="profile-name">USERNAME</h3>
+            <img src="data:image/png;base64,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" alt="profile-icon" class="profile-icon"/>
+        </div>
+    </header>
+
+    <!--            -->
+    <!-- PARTÍCULAS -->
+    <!--            -->
+    <div id="particles-js"></div>
+
+
+    <!--         -->
+    <!-- CONTENT -->
+    <!--         -->
+    <div class="content-form">
+        <div class="content-logo">
+            <img src="../assets/selettra.png" alt="logo selettra">
+        </div>
+        <div class="content-inputs">
+            <div class="inputs">
+                <div class="input-field">
+                    <i class="fas fa-qrcode"></i>
+                    <input type="text" name="code" placeholder="Código do item...">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-calendar-week"></i>
+                    <input type="date" name="date" placeholder="Selecione a data...">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-pencil-ruler"></i>
+                    <input type="text" name="desc" placeholder="Descricao...">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-dollar-sign"></i>
+                    <input type="text" name="valor" placeholder="Valor em reais...">
+                </div>
+            </div>
+        </div>
+        <div class="content-button">
+            <button class="btn btn-dark" name="add-item"> <i class="fas fa-plus"></i>&nbsp Adicionar</button>
+            <button class="btn btn-green" name="add-item"> <i class="fas fa-paper-plane"></i>&nbsp Enviar</button>
+        </div>
+    </div>
+</body>
+</html>
